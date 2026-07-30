@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="元住吉・井田小学校区の中古マンションを比較する家族向け購入判断レポート" />
+  <meta name="theme-color" content="#102a43" />
+  <title>マイホーム購入検討レポート｜元住吉</title>
+  <style>
+    :root{
+      --ink:#172b3a;--muted:#667784;--navy:#102a43;--navy2:#183f5d;
+      --accent:#b58a3a;--accent-soft:#f7f0e2;--blue:#2d6cdf;--green:#23836b;
+      --orange:#bd6a22;--red:#b74848;--surface:#fff;--bg:#f3f5f7;--line:#dde3e8;
+      --shadow:0 16px 44px rgba(16,42,67,.10);--radius:22px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.75}
+    a{color:inherit}
+    .wrap{width:min(1160px,calc(100% - 32px));margin:auto}
+    .topbar{background:#091d2c;color:#dce7ee;font-size:12px;letter-spacing:.08em}
+    .topbar .wrap{display:flex;justify-content:space-between;padding:8px 0}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(130deg,#102a43 0%,#173f5d 58%,#255d75 100%);color:white;padding:54px 0 46px}
+    .hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.11);border-radius:50%;right:-110px;top:-190px;box-shadow:0 0 0 55px rgba(255,255,255,.035),0 0 0 110px rgba(255,255,255,.025)}
+    .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:800;color:#dbc18d;text-transform:uppercase}
+    .hero h1{font-family:Georgia,"Yu Mincho",serif;font-size:clamp(30px,5.5vw,58px);line-height:1.22;margin:10px 0 12px;letter-spacing:.03em}
+    .hero p{max-width:780px;margin:0;color:#d7e1e8;font-size:15px}
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .hero-meta span{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);padding:7px 12px;border-radius:999px;font-size:12px}
+    nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 0;scrollbar-width:none}
+    nav a{text-decoration:none;white-space:nowrap;padding:8px 12px;border-radius:999px;font-size:13px;font-weight:750;color:var(--navy)}
+    nav a:hover{background:#eaf0f4}
+    main{padding:30px 0 70px}
+    section{scroll-margin-top:72px;margin-bottom:36px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px}
+    .section-head h2{margin:0;color:var(--navy);font-size:clamp(24px,3vw,34px);font-family:Georgia,"Yu Mincho",serif}
+    .section-head p{margin:0;color:var(--muted);font-size:13px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .decision{display:grid;grid-template-columns:1.35fr .65fr;overflow:hidden}
+    .decision-main{padding:28px}
+    .decision-aside{padding:28px;background:linear-gradient(145deg,#fffaf0,#f2ead9);border-left:1px solid #e8dcc2}
+    .label{font-size:11px;letter-spacing:.16em;color:var(--accent);font-weight:900}
+    .decision h3{font-size:clamp(24px,4vw,40px);line-height:1.35;margin:6px 0 8px;color:var(--navy);font-family:Georgia,"Yu Mincho",serif}
+    .decision p{margin:8px 0;color:var(--muted)}
+    .big-score{font-size:64px;line-height:1;color:var(--navy);font-weight:800}
+    .big-score small{font-size:16px}
+    .rank{display:inline-flex;background:var(--navy);color:#fff;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;margin-bottom:12px}
+    .chips{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}
+    .chip{border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
+    .chip.good{background:#e7f5f1;color:#176654}.chip.info{background:#e8f0ff;color:#2756a3}.chip.warn{background:#fff0e0;color:#9a521a}.chip.neutral{background:#eef1f3;color:#53636e}
+    .ranking{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .property{position:relative;padding:22px;overflow:hidden}
+    .property.first{border-top:5px solid var(--accent)}
+    .property.second{border-top:5px solid #8795a1}
+    .property.third{border-top:5px solid #a8734a}
+    .medal{position:absolute;right:18px;top:18px;font-size:12px;color:var(--muted);font-weight:800}
+    .property h3{font-size:19px;line-height:1.45;margin:8px 0 10px;color:var(--navy)}
+    .score-line{display:flex;align-items:baseline;gap:7px;margin:5px 0}
+    .score-line strong{font-size:38px;color:var(--navy)}
+    .score-line span{font-size:12px;color:var(--muted)}
+    .property .summary{font-size:13px;color:var(--muted);min-height:68px}
+    .mini-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+    .mini-facts div{background:#f7f9fa;border-radius:12px;padding:9px}
+    .mini-facts span{display:block;font-size:10px;color:var(--muted)}
+    .mini-facts b{font-size:13px}
+    .compare-wrap{overflow:auto}
+    table{border-collapse:separate;border-spacing:0;width:100%;min-width:820px}
+    th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:13px}
+    th{background:#edf2f5;color:var(--navy);font-size:12px}
+    td:first-child{font-weight:800;color:var(--navy);background:#fafbfc}
+    tr:last-child td{border-bottom:0}
+    .mark{font-weight:900}.mark.best{color:var(--green)}.mark.caution{color:var(--orange)}
+    .detail{padding:0;overflow:hidden}
+    .detail-head{display:grid;grid-template-columns:1fr auto;gap:16px;padding:25px 26px;background:#f9fbfc;border-bottom:1px solid var(--line)}
+    .detail-head h3{margin:4px 0;color:var(--navy);font-size:clamp(23px,3.4vw,34px);font-family:Georgia,"Yu Mincho",serif}
+    .detail-head p{margin:0;color:var(--muted);font-size:13px}
+    .detail-score{min-width:110px;text-align:center;border-left:1px solid var(--line);padding-left:22px}
+    .detail-score strong{display:block;font-size:44px;line-height:1;color:var(--navy)}
+    .detail-score span{font-size:11px;color:var(--muted)}
+    .detail-body{padding:25px 26px}
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+    .fact{background:#f5f7f8;border-radius:13px;padding:11px 12px}
+    .fact span{display:block;font-size:10px;color:var(--muted)}
+    .fact b{font-size:14px}
+    .bars{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:20px 0 24px}
+    .barbox{background:#fafbfc;border:1px solid var(--line);border-radius:13px;padding:12px}
+    .barbox .n{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+    .bar{height:6px;background:#e4e9ed;border-radius:999px;overflow:hidden;margin-top:8px}
+    .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--navy2),#4d829b);border-radius:999px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .panel{border-radius:15px;padding:16px 17px}
+    .panel h4{margin:0 0 7px;font-size:14px}
+    .panel ul{margin:0;padding-left:20px;font-size:13px}
+    .positive{background:#ebf7f3;border-left:4px solid var(--green)}
+    .risk{background:#fff3e8;border-left:4px solid var(--orange)}
+    .verdict{margin-top:16px;background:#eef3f6;border-left:4px solid var(--navy2);border-radius:14px;padding:16px 18px;font-size:14px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;text-decoration:none;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:800}
+    .btn.primary{background:var(--navy);color:#fff}.btn.secondary{border:1px solid var(--line);background:#fff;color:var(--navy)}
+    .questions{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .questions article{padding:22px}
+    .questions h3{margin:0 0 10px;color:var(--navy)}
+    .questions ol{margin:0;padding-left:23px;font-size:13px}
+    .disclaimer{padding:18px 20px;color:var(--muted);font-size:12px}
+    footer{background:#091d2c;color:#c9d5dc;padding:32px 0;font-size:12px}
+    footer strong{color:white}
+    @media(max-width:900px){
+      .decision{grid-template-columns:1fr}.decision-aside{border-left:0;border-top:1px solid #e8dcc2}
+      .ranking{grid-template-columns:1fr}.property .summary{min-height:auto}
+      .facts{grid-template-columns:1fr 1fr}.bars{grid-template-columns:1fr 1fr}.two-col,.questions{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .wrap{width:min(100% - 22px,1160px)}.hero{padding:40px 0 34px}.topbar .wrap span:last-child{display:none}
+      .decision-main,.decision-aside,.property,.detail-body{padding:20px}.detail-head{padding:20px;grid-template-columns:1fr}
+      .detail-score{text-align:left;border-left:0;border-top:1px solid var(--line);padding:13px 0 0}
+      .facts{grid-template-columns:1fr 1fr}.bars{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>PRIVATE REAL ESTATE REVIEW</span><span>井田小学校区・中古マンション購入検討</span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Family Home Selection Report</div>
+      <h1>マイホーム購入検討レポート</h1>
+      <p>価格だけでなく、10年後の売りやすさ、暮らしやすさ、管理状態、災害リスクまで同じ基準で比較した家族向けの購入判断資料です。</p>
+      <div class="hero-meta">
+        <span>比較物件 3件</span><span>希望：65㎡以上</span><span>3LDK中心</span><span>井田小学校区</span><span>住み替え可能性を考慮</span>
+      </div>
+    </div>
+  </header>
+
+  <nav><div class="wrap">
+    <a href="#conclusion">結論</a><a href="#ranking">ランキング</a><a href="#comparison">比較表</a>
+    <a href="#lilienheim">リリエンハイム</a><a href="#grandmaison">グランドメゾン</a><a href="#parkhouse">パークハウス</a><a href="#questions">確認事項</a>
+  </div></nav>
+
+  <main class="wrap">
+    <section id="conclusion">
+      <div class="section-head"><h2>Executive Summary</h2><p>現時点の総合判断</p></div>
+      <article class="card decision">
+        <div class="decision-main">
+          <div class="label">CURRENT FIRST CHOICE</div>
+          <h3>元住吉リリエンハイム</h3>
+          <div class="chips"><span class="chip good">価格とのバランス</span><span class="chip info">南向き・4階</span><span class="chip good">駅徒歩8分</span><span class="chip warn">築年数は要精査</span></div>
+          <p><strong>予算を抑えながら、広さ・駅距離・日当たりを確保しやすい点が最大の魅力。</strong>一方で、築年数と総戸数を踏まえ、長期修繕計画・積立金・室内状態を確認してから最終判断したい物件です。</p>
+          <p>築浅・ブランド・将来の流通性を最優先する場合は、グランドメゾン元住吉サウステラスが逆転候補になります。</p>
+        </div>
+        <aside class="decision-aside">
+          <span class="rank">暫定 1位</span>
+          <div class="big-score">84<small> / 100</small></div>
+          <p><strong>購入姿勢：</strong>資料確認を前提に、前向きに検討</p>
+          <p><strong>最大の確認点：</strong>修繕計画・リフォーム履歴・室内状態</p>
+        </aside>
+      </article>
+    </section>
+
+    <section id="ranking">
+      <div class="section-head"><h2>Candidate Ranking</h2><p>希望条件と10年後の住み替え可能性を考慮</p></div>
+      <div class="ranking">
+        <article class="card property first">
+          <span class="medal">01 / BEST BALANCE</span><div class="label">第1候補</div>
+          <h3>元住吉リリエンハイム</h3>
+          <div class="score-line"><strong>84</strong><span>POINTS</span></div>
+          <p class="summary">価格・広さ・駅距離・南向き4階のバランスが良好。築年数と管理状態を精査して判断。</p>
+          <div class="mini-facts"><div><span>価格</span><b>7,490万円</b></div><div><span>専有面積</span><b>76.3㎡</b></div><div><span>築年</span><b>1996年</b></div><div><span>駅徒歩</span><b>8分</b></div></div>
+        </article>
+        <article class="card property second">
+          <span class="medal">02 / ASSET VALUE</span><div class="label">第2候補</div>
+          <h3>グランドメゾン元住吉サウステラス</h3>
+          <div class="score-line"><strong>82</strong><span>POINTS</span></div>
+          <p class="summary">築浅・大規模・ブランド力は3件中トップ。約1億円の価格に納得できるかが焦点。</p>
+          <div class="mini-facts"><div><span>価格</span><b>9,980万円</b></div><div><span>築年</span><b>2017年</b></div><div><span>総戸数</span><b>306戸</b></div><div><span>駅徒歩</span><b>8分</b></div></div>
+        </article>
+        <article class="card property third">
+          <span class="medal">03 / LIFESTYLE</span><div class="label">第3候補</div>
+          <h3>パークハウス元住吉ピュアコンフォート</h3>
+          <div class="score-line"><strong>76</strong><span>POINTS</span></div>
+          <p class="summary">専用庭・専用駐車場は明確な強み。1階・月額負担・水害リスクが選択の分かれ目。</p>
+          <div class="mini-facts"><div><span>価格</span><b>7,780万円</b></div><div><span>専有面積</span><b>76.09㎡</b></div><div><span>築年</span><b>2005年</b></div><div><span>住戸</span><b>1階</b></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <div class="section-head"><h2>Comparison Matrix</h2><p>3物件を同じ軸で比較</p></div>
+      <div class="card compare-wrap"><table>
+        <thead><tr><th>比較項目</th><th>元住吉リリエンハイム</th><th>グランドメゾン元住吉</th><th>パークハウス元住吉</th></tr></thead>
+        <tbody>
+          <tr><td>総合評価</td><td class="mark best">84点</td><td>82点</td><td>76点</td></tr>
+          <tr><td>売出価格</td><td class="mark best">7,490万円</td><td class="mark caution">9,980万円</td><td>7,780万円</td></tr>
+          <tr><td>広さ</td><td>76.3㎡</td><td>掲載資料で再確認</td><td>76.09㎡</td></tr>
+          <tr><td>駅距離</td><td>徒歩8分</td><td>徒歩8分</td><td>徒歩10分</td></tr>
+          <tr><td>築年</td><td class="mark caution">1996年</td><td class="mark best">2017年</td><td>2005年</td></tr>
+          <tr><td>住戸条件</td><td class="mark best">南向き・4階</td><td>西向き</td><td class="mark caution">1階・角住戸</td></tr>
+          <tr><td>主な強み</td><td>価格・日当たり・広さ</td><td>築浅・大規模・ブランド</td><td>専用庭・専用駐車場</td></tr>
+          <tr><td>主な注意点</td><td>築年数・小規模・修繕</td><td>価格・西向き・水害</td><td>1階・月額負担・水害</td></tr>
+          <tr><td>向いている選び方</td><td>総合バランス</td><td>資産価値・安心感</td><td>暮らし方・車重視</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="lilienheim">
+      <div class="section-head"><h2>Property 01</h2><p>元住吉リリエンハイム</p></div>
+      <article class="card detail">
+        <header class="detail-head"><div><div class="label">BEST BALANCE</div><h3>元住吉リリエンハイム</h3><p>価格を抑えながら、76㎡超・駅徒歩8分・南向き4階を確保できる有力候補。</p></div><div class="detail-score"><strong>84</strong><span>TOTAL SCORE</span></div></header>
+        <div class="detail-body">
+          <div class="facts"><div class="fact"><span>売出価格</span><b>7,490万円</b></div><div class="fact"><span>専有面積</span><b>76.3㎡・3LDK</b></div><div class="fact"><span>築年</span><b>1996年3月</b></div><div class="fact"><span>交通</span><b>元住吉駅 徒歩8分</b></div><div class="fact"><span>所在階</span><b>4階／5階建</b></div><div class="fact"><span>向き</span><b>南向き</b></div><div class="fact"><span>総戸数</span><b>43戸</b></div><div class="fact"><span>施工</span><b>鹿島建設</b></div></div>
+          <div class="bars">
+            <div class="barbox"><div class="n"><span>価格</span><b>86</b></div><div class="bar"><i style="width:86%"></i></div></div>
+            <div class="barbox"><div class="n"><span>立地</span><b>87</b></div><div class="bar"><i style="width:87%"></i></div></div>
+            <div class="barbox"><div class="n"><span>居住性</span><b>88</b></div><div class="bar"><i style="width:88%"></i></div></div>
+            <div class="barbox"><div class="n"><span>資産価値</span><b>76</b></div><div class="bar"><i style="width:76%"></i></div></div>
+            <div class="barbox"><div class="n"><span>管理リスク</span><b>72</b></div><div class="bar"><i style="width:72%"></i></div></div>
+          </div>
+          <div class="two-col">
+            <div class="panel positive"><h4>評価できる点</h4><ul><li>南向き4階で日照・通風・プライバシーを期待しやすい。</li><li>76㎡超、3LDK、駅徒歩8分で家族向け条件が整う。</li><li>井田小学校に近く、通学負担を抑えやすい。</li><li>鹿島建設施工は安心材料になり得る。</li></ul></div>
+            <div class="panel risk"><h4>慎重に確認する点</h4><ul><li>築30年を迎えるため、修繕履歴と今後の資金計画が重要。</li><li>43戸のため、将来の修繕負担が各戸に重くなる可能性。</li><li>リフォーム済みの明示がなく、室内状態と追加費用を要確認。</li><li>給排水管・サッシ・玄関扉など共用部更新状況も確認。</li></ul></div>
+          </div>
+          <div class="verdict"><strong>ちゃぴの購入判断：</strong>現時点では第一候補。内装に大きな追加費用がかからず、長期修繕計画と積立状況に問題がなければ、かなり前向きに検討します。</div>
+          <div class="actions"><a class="btn primary" href="https://suumo.jp/ms/chuko/kanagawa/sc_kawasakishinakahara/nc_21152965/" target="_blank" rel="noopener">掲載ページを開く</a><a class="btn secondary" href="#questions">確認事項を見る</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="grandmaison">
+      <div class="section-head"><h2>Property 02</h2><p>グランドメゾン元住吉サウステラス</p></div>
+      <article class="card detail">
+        <header class="detail-head"><div><div class="label">ASSET VALUE LEADER</div><h3>グランドメゾン元住吉サウステラス</h3><p>建物・ブランド・規模・築年の強さは3件中トップ。価格との釣り合いが最大の論点。</p></div><div class="detail-score"><strong>82</strong><span>TOTAL SCORE</span></div></header>
+        <div class="detail-body">
+          <div class="facts"><div class="fact"><span>売出価格</span><b>9,980万円</b></div><div class="fact"><span>交通</span><b>元住吉駅 徒歩8分</b></div><div class="fact"><span>築年</span><b>2017年</b></div><div class="fact"><span>総戸数</span><b>306戸</b></div><div class="fact"><span>ブランド</span><b>積水ハウス</b></div><div class="fact"><span>向き</span><b>西向き</b></div><div class="fact"><span>位置付け</span><b>資産価値重視</b></div><div class="fact"><span>価格感</span><b>やや強気</b></div></div>
+          <div class="bars">
+            <div class="barbox"><div class="n"><span>価格</span><b>70</b></div><div class="bar"><i style="width:70%"></i></div></div>
+            <div class="barbox"><div class="n"><span>立地</span><b>84</b></div><div class="bar"><i style="width:84%"></i></div></div>
+            <div class="barbox"><div class="n"><span>居住性</span><b>80</b></div><div class="bar"><i style="width:80%"></i></div></div>
+            <div class="barbox"><div class="n"><span>資産価値</span><b>90</b></div><div class="bar"><i style="width:90%"></i></div></div>
+            <div class="barbox"><div class="n"><span>管理安心感</span><b>87</b></div><div class="bar"><i style="width:87%"></i></div></div>
+          </div>
+          <div class="two-col">
+            <div class="panel positive"><h4>評価できる点</h4><ul><li>2017年築で、将来売却時にも築年数の説明力がある。</li><li>306戸の大規模マンションで流通性が期待しやすい。</li><li>グランドメゾンブランドは購入者への訴求力が高い。</li><li>10年以内の住み替え可能性を考えると有力。</li></ul></div>
+            <div class="panel risk"><h4>慎重に確認する点</h4><ul><li>約1億円の価格は、良さを十分織り込んだ水準。</li><li>西向きの日照・西日・室温を現地確認。</li><li>ハザードマップと浸水想定を確認。</li><li>管理費・修繕積立金の将来増額予定を確認。</li></ul></div>
+          </div>
+          <div class="verdict"><strong>ちゃぴの購入判断：</strong>資産価値を最重視するなら第一候補になり得ます。ただし満額で急がず、管理資料と周辺成約事例を確認して価格交渉を検討します。</div>
+          <div class="actions"><a class="btn primary" href="https://suumo.jp/ms/chuko/kanagawa/sc_kawasakishinakahara/nc_21197729/" target="_blank" rel="noopener">掲載ページを開く</a><a class="btn secondary" href="#questions">確認事項を見る</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="parkhouse">
+      <div class="section-head"><h2>Property 03</h2><p>パークハウス元住吉ピュアコンフォート エアリーコート</p></div>
+      <article class="card detail">
+        <header class="detail-head"><div><div class="label">LIFESTYLE OPTION</div><h3>パークハウス元住吉ピュアコンフォート</h3><p>専用庭と専用駐車場を日常的に活用する家庭には、他の2件にない魅力がある。</p></div><div class="detail-score"><strong>76</strong><span>TOTAL SCORE</span></div></header>
+        <div class="detail-body">
+          <div class="facts"><div class="fact"><span>売出価格</span><b>7,780万円</b></div><div class="fact"><span>専有面積</span><b>76.09㎡</b></div><div class="fact"><span>築年</span><b>2005年</b></div><div class="fact"><span>交通</span><b>元住吉駅 徒歩10分</b></div><div class="fact"><span>所在階</span><b>1階</b></div><div class="fact"><span>住戸</span><b>角住戸</b></div><div class="fact"><span>特徴</span><b>専用庭・駐車場</b></div><div class="fact"><span>月額負担</span><b>約50,840円</b></div></div>
+          <div class="bars">
+            <div class="barbox"><div class="n"><span>価格</span><b>77</b></div><div class="bar"><i style="width:77%"></i></div></div>
+            <div class="barbox"><div class="n"><span>立地</span><b>77</b></div><div class="bar"><i style="width:77%"></i></div></div>
+            <div class="barbox"><div class="n"><span>居住性</span><b>83</b></div><div class="bar"><i style="width:83%"></i></div></div>
+            <div class="barbox"><div class="n"><span>資産価値</span><b>70</b></div><div class="bar"><i style="width:70%"></i></div></div>
+            <div class="barbox"><div class="n"><span>リスク耐性</span><b>61</b></div><div class="bar"><i style="width:61%"></i></div></div>
+          </div>
+          <div class="two-col">
+            <div class="panel positive"><h4>評価できる点</h4><ul><li>76㎡超でファミリー向けの広さがある。</li><li>専用庭・専用駐車場は暮らし方に合えば大きな価値。</li><li>三菱地所系ブランドの安心感。</li><li>戸建てに近い使い方ができる。</li></ul></div>
+            <div class="panel risk"><h4>慎重に確認する点</h4><ul><li>1階の防犯・湿気・虫・外部からの視線。</li><li>水害リスクと過去の浸水・漏水履歴。</li><li>月額約5万円の固定費が長期的な負担。</li><li>専用駐車場の権利が売却時に承継できるか。</li></ul></div>
+          </div>
+          <div class="verdict"><strong>ちゃぴの購入判断：</strong>庭と車を積極的に使うなら検討価値があります。ただし1階と固定費の弱点が明確なので、家族の暮らし方との一致が必要です。</div>
+          <div class="actions"><a class="btn primary" href="https://suumo.jp/ms/chuko/kanagawa/sc_kawasakishinakahara/nc_21124971/" target="_blank" rel="noopener">掲載ページを開く</a><a class="btn secondary" href="#questions">確認事項を見る</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="questions">
+      <div class="section-head"><h2>Due Diligence</h2><p>仲介会社へ確認する資料・質問</p></div>
+      <div class="questions">
+        <article class="card"><h3>全物件共通</h3><ol><li>重要事項調査報告書</li><li>長期修繕計画書と積立金の改定予定</li><li>直近2〜3期分の管理組合総会議事録</li><li>管理費・修繕積立金の滞納状況</li><li>売却理由・販売開始時期・価格変更履歴</li><li>同一マンションと近隣の直近成約事例</li><li>ハザードマップ、浸水・漏水履歴</li></ol></article>
+        <article class="card"><h3>リリエンハイムで追加確認</h3><ol><li>室内のリフォーム・設備交換履歴</li><li>給排水管の更新状況</li><li>大規模修繕の実施内容と次回予定</li><li>修繕積立金残高と借入金の有無</li><li>今後予定される一時金・値上げ</li><li>窓サッシ・玄関扉など共用部分の更新状況</li></ol></article>
+      </div>
+    </section>
+
+    <section><div class="card disclaimer">
+      <strong>ご注意：</strong>本ページは家族での比較検討を目的とした私的な判断資料です。点数は掲載情報とこれまでの希望条件を基にした暫定評価であり、鑑定評価や将来価格を保証するものではありません。購入前に最新の販売状況、登記、管理資料、修繕計画、現地状況、契約条件を必ず専門家・仲介会社へ確認してください。
+    </div></section>
+  </main>
+
+  <footer><div class="wrap"><strong>MY HOME SELECTION REPORT</strong><br>元住吉・井田小学校区｜家族向け比較サイト</div></footer>
+</body>
+</html>
